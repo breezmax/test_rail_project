@@ -3,7 +3,7 @@
 <suite name="TestRail" parallel="tests" thread-count="1">
     <test name="test">
         <classes>
-           <!-- <class name="onliner.tests.NavigationTest"/> -->
+            <class name="testrail.tests.UserLoginLogoutTest"/>
             <class name="testrail.tests.CreatingProjectTest"/>
         </classes>
     </test>
