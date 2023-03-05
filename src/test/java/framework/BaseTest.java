@@ -14,7 +14,7 @@ public class BaseTest {
         public void setup() {
           driver.getInstance();
           driver.windowMaximize();
-          driver.get(PropertyReader.getProperty("base.project.URL"));
+          driver.get(PropertyReader.getProperty("base.URL"));
         }
 
         @AfterMethod(alwaysRun = true, description = "Closing browser anyway")
