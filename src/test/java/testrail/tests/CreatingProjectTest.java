@@ -4,7 +4,8 @@ import framework.BaseTest;
 import org.testng.annotations.*;
 import testrail.pageObjects.pages.DashboardPage;
 import testrail.pageObjects.pages.LoginPage;
-import testrail.pageObjects.pages.ProjectPage;
+import testrail.pageObjects.pages.NewProjectPage;
+import testrail.pageObjects.pages.TopPanelPage;
 
 public class CreatingProjectTest extends BaseTest {
 
@@ -21,21 +22,21 @@ public class CreatingProjectTest extends BaseTest {
         DashboardPage dashboardPage = new DashboardPage();
         dashboardPage.addNewProject();
 
-        ProjectPage projectPage = new ProjectPage();
-        projectPage.enterNameForNewProject("My Test Project");
-        projectPage.clickOnAddProjectButton();
-        projectPage.checkSuccessNotification();
-        projectPage.checkProjectInGrid("My Test Project");
+        NewProjectPage newProjectPage = new NewProjectPage();
+        newProjectPage.enterNameForNewProject("My Test Project");
+        newProjectPage.clickOnAddProjectButton();
+        newProjectPage.checkSuccessNotification();
+        newProjectPage.checkProjectInGrid("My Test Project");
     }
 
     @AfterMethod
     public void logoutFromSite(){
-        ProjectPage projectPage = new ProjectPage();
-        projectPage.clickOnDeleteProjectButton("My Test Project");
-        projectPage.setFlagAndDeleteProject();
+        NewProjectPage newProjectPage = new NewProjectPage();
+        newProjectPage.clickOnDeleteProjectButton("My Test Project");
+        newProjectPage.setFlagAndDeleteProject();
 
-        DashboardPage dashboardPage = new DashboardPage();
-        dashboardPage.navigateToUserPreferencesDropdown();
-        dashboardPage.logoutFromSite();
+        TopPanelPage topPanel = new TopPanelPage();
+        topPanel.navigateToUserPreferencesDropdown();
+        topPanel.logoutFromSite();
     }
 }

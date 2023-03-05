@@ -3,7 +3,7 @@ package testrail.tests;
 import framework.BaseTest;
 import org.testng.annotations.Test;
 import testrail.pageObjects.pages.LoginPage;
-import testrail.pageObjects.pages.DashboardPage;
+import testrail.pageObjects.pages.TopPanelPage;
 
 public class UserLoginLogoutTest extends BaseTest {
 
@@ -14,8 +14,8 @@ public class UserLoginLogoutTest extends BaseTest {
         loginPage.enterValidUserPassword();
         loginPage.loginToSite();
 
-        DashboardPage dashboardPage = new DashboardPage();
-        dashboardPage.navigateToUserPreferencesDropdown();
-        dashboardPage.logoutFromSite();
+        TopPanelPage topPanel = new TopPanelPage();
+        topPanel.navigateToUserPreferencesDropdown();
+        topPanel.logoutFromSite();
     }
 }
