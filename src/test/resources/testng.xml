@@ -4,8 +4,9 @@
     <test name="test">
         <classes>
             <class name="testrail.tests.UserLoginLogoutTest"/>
-            <class name="testrail.tests.CreatingProjectTest"/>
             <class name="testrail.tests.TestCaseE2ETest"/>
+            <class name="testrail.tests.CreatingProjectTest"/>
+            <class name="testrail.tests.CreatingMilestoneTest"/>
         </classes>
     </test>
 </suite>
