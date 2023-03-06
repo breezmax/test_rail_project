@@ -49,11 +49,8 @@ public class TestCaseE2ETest extends BaseTest {
 
         exisitingTestCasePage.deleteSection("Test Cases");
 
-
-        NewProjectPage newProjectPage = new NewProjectPage();
-        newProjectPage.setFlagAndDeleteProject();
-
-
+        DeleteDialogPage deleteDialogPage = new DeleteDialogPage();
+        deleteDialogPage.setFlagAndDeleteItem();
 
     }
 

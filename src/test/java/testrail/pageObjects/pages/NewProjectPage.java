@@ -2,7 +2,6 @@ package testrail.pageObjects.pages;
 
 import framework.BasePage;
 import framework.elements.Button;
-import framework.elements.CheckBox;
 import framework.elements.Label;
 import framework.elements.TextBox;
 import io.qameta.allure.Step;
@@ -18,8 +17,6 @@ public class NewProjectPage extends BasePage {
     private static final String SUCCESS_PROJECT_NOTIFICATION = "//div[@class='message message-success']";
     private static final String PROJECT_IN_THE_GRID = "//tr/td/a[contains(text(),'%s')]";
     private static final String DELETE_PROJECT_BUTTON = "//a[contains(text(),'%s')]/../..//div[@class='icon-small-delete']";
-    private static final String DELETE_CONFORMATION_FLAG = "//span[@class='dialog-confirm']/strong[contains(text(),'Yes, delete')]";
-    private static final String DELETE_CONFORMATION_BUTTON = "//div[@id='deleteDialog']//a[@class='button button-ok button-left button-positive dialog-action-default' and contains(text(),'OK')]";
 
     public NewProjectPage() {
         super(pageLOCATOR, "'Add new Project' Page");
@@ -61,13 +58,4 @@ public class NewProjectPage extends BasePage {
         deleteProjectButton.moveAndClickByAction();
     }
 
-    @Step("Set conformation flag and deleting the project")
-    public void setFlagAndDeleteProject(){
-        CheckBox conformattionCheckbox = new CheckBox(By.xpath(DELETE_CONFORMATION_FLAG));
-        conformattionCheckbox.moveAndClickByAction();
-
-        Button conformationOKButton = new Button(By.xpath(DELETE_CONFORMATION_BUTTON));
-        conformationOKButton.moveToElement();
-        conformationOKButton.clickAndWait();
-    }
 }

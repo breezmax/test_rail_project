@@ -15,7 +15,6 @@ public class NewTestCasePage extends BasePage {
     private static final String TEST_CASE_STEPS_FIELD = "//div[@id='custom_steps_display']";
     private static final String TEST_CASE_EXPECTED_RESULT_FIELD = "//div[@id='custom_expected_display']";
     private static final String TEST_CASE_ADD_TEST_CASE_BUTTON = "//button[@id='accept']";
-    private static final String TEST_CASE_RETURN_TO_DASHBOARD = "//a[@id='navigation-dashboard-top']";
     private static final String TEST_CASE_CANCEL_BUTTON = "//div[@class='button-group']/a[contains(text(),'Cancel')]";
     public NewTestCasePage() {
         super(pageLocator, "'New Test Case' Page");

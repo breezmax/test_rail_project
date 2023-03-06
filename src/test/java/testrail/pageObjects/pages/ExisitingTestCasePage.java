@@ -15,7 +15,6 @@ public class ExisitingTestCasePage extends BasePage {
     private static final String TEST_CASE_EDIT_BUTTON = "//span[@class='button-text']";
     private static final String TEST_CASE_SECTION = "//span[@class='title' and contains(text(),'%s')]";
     private static final String TEST_CASE_SECTION_DELETE_BUTTON = "//span[@class='title' and contains(text(),'%s')]/..//div[@class='icon-small-delete hidden action-hover']";
-
     public ExisitingTestCasePage() {
         super(pageLocator, "'Existing Test Case' Page");
         assertIsOpened();
@@ -24,7 +23,6 @@ public class ExisitingTestCasePage extends BasePage {
     @Step("Checking notification message after Test Case was created")
     public void checkSuccessNotification(){
         Assert.assertEquals(new Button(By.xpath(SUCCESS_TEST_CASE_NOTIFICATION)).getText(), expectedSuccessMessage);
-        System.out.println(new Button(By.xpath(SUCCESS_TEST_CASE_NOTIFICATION)).getText());
     }
 
     @Step("Clicking on 'Edit' button")

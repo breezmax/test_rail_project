@@ -2,7 +2,6 @@ package testrail.pageObjects.pages;
 
 import framework.BasePage;
 import framework.elements.Button;
-import framework.elements.DropDown;
 import framework.elements.Label;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -17,7 +16,6 @@ public class DashboardPage extends BasePage {
         super(pageLocator, "'Dashboard' Page");
         assertIsOpened();
     }
-
 
     @Step("Clicking to 'Add Project' button")
     public void addNewProject(){

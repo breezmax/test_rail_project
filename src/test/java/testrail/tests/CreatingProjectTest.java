@@ -2,10 +2,7 @@ package testrail.tests;
 
 import framework.BaseTest;
 import org.testng.annotations.*;
-import testrail.pageObjects.pages.DashboardPage;
-import testrail.pageObjects.pages.LoginPage;
-import testrail.pageObjects.pages.NewProjectPage;
-import testrail.pageObjects.pages.TopPanelPage;
+import testrail.pageObjects.pages.*;
 
 public class CreatingProjectTest extends BaseTest {
 
@@ -33,7 +30,9 @@ public class CreatingProjectTest extends BaseTest {
     public void logoutFromSite(){
         NewProjectPage newProjectPage = new NewProjectPage();
         newProjectPage.clickOnDeleteProjectButton("My Test Project");
-        newProjectPage.setFlagAndDeleteProject();
+
+        DeleteDialogPage deleteDialogPage = new DeleteDialogPage();
+        deleteDialogPage.setFlagAndDeleteItem();
 
         TopPanelPage topPanel = new TopPanelPage();
         topPanel.navigateToUserPreferencesDropdown();

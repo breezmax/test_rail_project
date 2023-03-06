@@ -1,7 +1,6 @@
 package testrail.pageObjects.pages;
 
 import framework.BasePage;
-import framework.BaseTest;
 import framework.elements.Button;
 import framework.elements.DropDown;
 import io.qameta.allure.Step;
@@ -26,6 +25,6 @@ public class TopPanelPage extends BasePage {
     @Step("Log out from 'Test Rail' site")
     public void logoutFromSite(){
         DropDown logoutValue = new DropDown(By.xpath(LOGOUT_VALUE_IN_DROPDOWN));
-        logoutValue.clickAndWait();
+        logoutValue.moveAndClickByAction();
     }
 }
